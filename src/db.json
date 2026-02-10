@@ -1,0 +1,25 @@
+{
+    "post":[
+        {
+            "id":"244a",
+            "title":"re",
+            "body":"er",
+            "image":"https://picsum.photos/id/237/200/300"
+        }
+    ],
+    "users":[
+        {
+            "id":"bf28",
+            "mobilenumber":"58745369587",
+            "role":"user",
+            "createdAt":"2026-01-31T05:28:10.058z"
+        },
+        {
+            "id":"b428",
+            "mobilenumber":"58745369587",
+            "role":"user",
+            "createdAt":"2026-01-31T05:28:10.058z"
+        }
+
+    ]
+}

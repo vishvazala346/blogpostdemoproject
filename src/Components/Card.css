@@ -1,0 +1,161 @@
+/* --- Global Reset & Container --- */
+.page-container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* --- Base Card Styles --- */
+.card {
+  width: 320px;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease; /* Smooth color transition */
+}
+
+/* --- LIGHT MODE (ctx.mode === 'light') --- */
+.light {
+  background-color: #ffffff; /* આખા પેજનું બેકગ્રાઉન્ડ સફેદ */
+}
+
+.light .page-title {
+  color: rgb(22, 24, 24);
+}
+
+.light .card {
+  background-color: #c9c9c9; /* કાર્ડનો કલર આછો ગ્રે */
+  color: #333;
+}
+
+.light .btn.edt {
+  background: rgb(71, 71, 71);
+  color: white;
+}
+
+/* --- DARK MODE (ctx.mode === 'dark') --- */
+.dark {
+  background-color: #121212; /* આખા પેજનું બેકગ્રાઉન્ડ ડાર્ક */
+}
+
+.dark .page-title {
+  color: #ffffff;
+}
+
+.dark .card {
+  background-color: #686868; /* કાર્ડનો કલર ડાર્ક ગ્રે */
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
+}
+/* --- White Line Fix --- */
+.page-title {
+  margin: 0 !important;      /* બધી બાજુથી માર્જિન ઝીરો કરો */
+  padding: 40px 0 !important; /* ઉપર-નીચે જગ્યા માટે પેડિંગ વાપરો */
+  text-align: center;
+}
+
+/* --- LIGHT MODE --- */
+.page-container.light {
+  background-color: #ffffff !important;
+}
+
+.card.light {
+  background-color: #f1f1f1 !important;
+  color: #222 !important;
+}
+
+/* --- DARK MODE --- */
+.page-container.dark {
+  background-color: #121212 !important; /* ડાર્ક બેકગ્રાઉન્ડ */
+}
+
+.card.dark {
+  background-color: #2c2c2c !important; /* કાર્ડનો કલર */
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* જૂનો કલર કાઢવા માટે આને ખાલી કરો */
+.card {
+  background-color: transparent; 
+}
+.dark .btn.edt {
+  background: #ffffff;
+  color: #222;
+}.page-container {
+  /* આ આખા પેજને કવર કરશે */
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  
+  /* જૂનું માર્જિન કાઢી નાખજો જો હોય તો */
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Created posts ને વધારાની જગ્યા લેવા માટે */
+.created-posts {
+  flex: 1; /* આ પ્રોપર્ટી સફેદ પટ્ટી કાઢી નાખશે કારણ કે તે બધી ખાલી જગ્યા રોકી લેશે */
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto;
+  padding-bottom: 50px; /* ફૂટર અને કાર્ડ વચ્ચે જગ્યા માટે */
+}
+
+/* --- Layout Styles (Common) --- */
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.created-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto 80px;
+}
+
+.img-box {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.btn-scroll {
+  height: 50px;
+  width: 50px;
+  position: fixed; /* પેજની સાથે મૂવ ન થાય તે માટે fixed */
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  margin-left: 50px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  background: #e74c3c;
+}

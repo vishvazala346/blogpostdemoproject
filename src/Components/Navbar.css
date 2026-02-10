@@ -1,0 +1,91 @@
+
+
+.nav {
+  height: 60px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+
+}
+
+
+.nav.light {
+  background-color: #f1f1f1; 
+}
+
+.nav.light .title,
+.nav.light .menubar a,
+.nav.light .dark-text {
+  color: #333; 
+}
+
+.nav.light .active-link {
+  border-bottom: 2px solid #333;
+}
+
+.nav.light .profile-logo-circle {
+  border: 2px solid #333;
+  color: #696363;
+}
+
+/* --- DARK MODE COLORS --- */
+.nav.dark {
+  background-color: #383838; /* ડાર્ક ગ્રે/બ્લેક */
+}
+
+.nav.dark .title,
+.nav.dark .menubar a,
+.nav.dark .dark-text {
+  color: white;
+}
+
+.nav.dark .active-link {
+  border-bottom: 2px solid white;
+}
+
+.nav.dark .profile-logo-circle {
+  border: 2px solid white;
+  color: white;
+}
+
+/* --- Common Layout Styles --- */
+.title {
+  font-size: 24px;
+  justify-self: start;
+}
+
+.menubar {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.menubar a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-self: end;
+}
+
+.profile-logo-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;  
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.active-link {
+  font-weight: bold;
+}
